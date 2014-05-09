@@ -80,6 +80,9 @@ xterm*|rxvt*)
     show_command_in_title_bar()
     {
         case "$BASH_COMMAND" in
+            tmux*)
+                # set titles from inside tmux
+                ;;
             history*)
                 # don't trap history command
                 ;;
