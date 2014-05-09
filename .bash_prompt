@@ -80,6 +80,9 @@ xterm*|rxvt*)
     show_command_in_title_bar()
     {
         case "$BASH_COMMAND" in
+            history*)
+                # don't trap history command
+                ;;
             *\033]0*)
                 # The command is trying to set the title bar as well;
                 # this is most likely the execution of $PROMPT_COMMAND.
