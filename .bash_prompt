@@ -15,7 +15,7 @@ if tput setaf 1 &> /dev/null; then
 		MAGENTA=$(tput setaf 9)
 		ORANGE=$(tput setaf 172)
 		GREEN=$(tput setaf 190)
-		PURPLE=$(tput setaf 141)
+		YELLOW=$(tput setaf 230)
 		WHITE=$(tput setaf 256)
 	else
 		MAGENTA=$(tput setaf 5)
@@ -37,22 +37,9 @@ else
 fi
 
 
-function git_info() {
-	# check if we're in a git repo
-	git rev-parse --is-inside-work-tree &>/dev/null || return
-
-	# quickest check for what branch we're on
-	branch=$(git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||')
-
-	# check if it's dirty (via github.com/sindresorhus/pure)
-	dirty=$(git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ]&& echo -e "*")
-
-	echo "${ORANGE} on "$PURPLE$branch$dirty
-}
-
 # Only show username/host if not default
 function usernamehost() {
-	if [ $USER != "$default_username" ]; then echo "${MAGENTA}$USER ${WHITE}at ${ORANGE}$HOSTNAME $WHITEin "; else echo "${MAGENTA}$USER ${GREEN}in "; fi
+	if [ $USER != "$default_username" ]; then echo "${MAGENTA}$USER ${WHITE}at ${ORANGE}$HOSTNAME ${YELLOW}in "; else echo "${GREEN}$USER ${YELLOW}in "; fi
 }
 
 # iTerm Tab and Title Customization and prompt customization
@@ -70,7 +57,7 @@ export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true  
 #export GIT_PS1_SHOWSTASHSTATE=true  
 
-PS1="${BOLD}\$(usernamehost)\[$GREEN\]\w\$(__git_ps1 ' \[\e[34;1m\] on %s\[\e[0m\]')\[\e[0m\]\n\$ \[$RESET\]"
+PS1="${BOLD}\$(usernamehost)\[$YELLOW\]\w\$(__git_ps1 ' \[\e[34;1m\] on %s\[\e[0m\]')\[\e[0m\]\n\$ \[$RESET\]"
 case "$TERM" in
 xterm*|rxvt*)
     export PROMPT_COMMAND='history -a && echo -ne "\033]0;${PWD/$HOME/~}\007"'
