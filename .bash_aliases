@@ -1,0 +1,8 @@
+alias pm='python manage.py'
+alias mp='mplayer -fs'
+alias open='xdg-open'
+alias prettyjson='python -m json.tool'
+alias lll='ls -ltr'
+alias vim='nvim'
+alias e='nvim'
+alias lg='lazygit'
