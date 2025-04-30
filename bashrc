@@ -212,6 +212,7 @@ export PATH="/usr/bin:/bin:/usr/local/bin:$PATH"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:$HOME/opt/nvim/bin"
+export PATH="$PATH:$HOME/.cargo/bin"
 
 
 export WORKON_HOME=$HOME/.virtualenvs
