@@ -129,7 +129,7 @@ shopt -s histappend
 
 source $HOME/.bash_aliases
 # Path to the bash it configuration
-export BASH_IT="/home/martin/.bash_it"
+export BASH_IT="/home/${USER}/.bash_it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
@@ -215,7 +215,7 @@ export PATH="$PATH:$HOME/opt/nvim/bin"
 
 
 export WORKON_HOME=$HOME/.virtualenvs
-#source /home/martin/.local/bin/virtualenvwrapper.sh
+#source /home/${USER}/.local/bin/virtualenvwrapper.sh
 source ~/.local/bin/bashmarks.sh
 
 export PYENV_ROOT="$HOME/.pyenv"
