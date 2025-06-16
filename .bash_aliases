@@ -1,4 +1,5 @@
 alias pm='python manage.py'
+alias sp='spotify_player'
 alias mp='mplayer -fs'
 alias open='xdg-open'
 alias prettyjson='python -m json.tool'
