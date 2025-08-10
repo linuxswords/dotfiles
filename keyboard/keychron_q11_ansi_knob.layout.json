@@ -2,13 +2,13 @@
   "name": "Keychron Q11 ANSI Knob",
   "vendorProductId": 875823584,
   "macros": [
-    "",
+    "{KC_RCTL,KC_RSFT,KC_EQL}",
     "{+KC_RCTL}c{-KC_RCTL}",
     "{+KC_RCTL}v{-KC_RCTL}",
     "{+KC_RCTL}x{-KC_RCTL}",
-    "",
+    "{KC_RCTL,KC_0}",
     "{+KC_RCTL}V{-KC_RCTL}",
-    "",
+    "{KC_RCTL,KC_RSFT,KC_MINS}",
     "{+KC_RALT}q{-KC_RALT}",
     "{+KC_RALT}p{-KC_RALT}",
     "{+KC_RALT}y{-KC_RALT}",
@@ -21,7 +21,7 @@
   ],
   "layers": [
     [
-      "KC_MUTE",
+      "MACRO(4)",
       "KC_ESC",
       "KC_F1",
       "KC_F2",
@@ -49,7 +49,7 @@
       "KC_T",
       "KC_NO",
       "MACRO(3)",
-      "KC_CAPS",
+      "MT(MOD_LCTL,KC_ESC)",
       "KC_A",
       "KC_S",
       "KC_D",
@@ -463,7 +463,7 @@
   ],
   "encoders": [
     [
-      ["KC_VOLD", "KC_VOLU"],
+      ["MACRO(6)", "MACRO(0)"],
       ["RGB_VAD", "RGB_VAI"],
       ["KC_VOLD", "KC_VOLU"],
       ["RGB_VAD", "RGB_VAI"]
