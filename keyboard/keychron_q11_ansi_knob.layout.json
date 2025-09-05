@@ -3,9 +3,9 @@
   "vendorProductId": 875823584,
   "macros": [
     "{KC_RCTL,KC_RSFT,KC_EQL}",
-    "{+KC_LCTL}i{-KC_LCTL}",
-    "{+KC_LCTL}.{-KC_LCTL}",
-    "{+KC_LCTL}b{-KC_LCTL}",
+    "{+KC_LCTL}c{-KC_LCTL}",
+    "{+KC_LCTL}v{-KC_LCTL}",
+    "{+KC_LCTL}x{-KC_LCTL}",
     "{KC_RCTL,KC_S}",
     "{+KC_LSFT}{+KC_LCTL}.{-KC_LCTL}{-KC_LSFT}",
     "{KC_RCTL,KC_RSFT,KC_MINS}",
