@@ -1,0 +1,164 @@
+[
+    {
+        "name": "nvim",
+        "desc": "best editor ever",
+        "type": "base"
+    },
+    {
+        "name": "htop",
+        "desc": "what is my machine doing",
+        "type": "base",
+        "install": {
+            "type": "apt",
+            "cmd": "sudo apt get install htop"
+        }
+    },
+    {
+        "name": "git",
+        "desc": "scm",
+        "type": "base"
+    },
+    {
+        "name": "docker",
+        "desc": "docker",
+        "type": "base"
+    },
+    {
+        "name": "lazydocker",
+        "desc": "tui for docker",
+        "type": "extension",
+        "install": {
+            "type": "go",
+            "cmd": "go install github.com/jesseduffield/lazydocker@latest"
+        }
+    },
+    {
+        "name": "yazi",
+        "desc": "tui for filemanager",
+        "type": "extension",
+        "install": {
+            "type": "manual",
+            "url": "https://yazi-rs.github.io/docs/installation/"
+        }
+    },
+    {
+        "name": "bluetui",
+        "desc": "tui for bluetooth",
+        "type": "extension"
+    },
+    {
+        "name": "lazygit",
+        "desc": "tui for git",
+        "type": "extension"
+    },
+    {
+        "name": "glances",
+        "type": "base",
+        "desc": "htop on steroids; python",
+        "install": {
+            "type": "python",
+            "cmd": "pip install glances"
+        }
+    },
+    {
+        "name": "gnome-tweaks",
+        "type": "base",
+        "desc": "ui for tweaking window manager"
+    },
+    {
+        "name": "nerd-fonts",
+        "type": "extension",
+        "desc": "used by most modern terminal applications",
+        "install": {
+            "type": "manual",
+            "url": "https://www.nerdfonts.com/font-downloads"
+        }
+    },
+    {
+        "name": "jq",
+        "type": "base",
+        "desc": "terminal json parsers"
+    },
+    {
+        "name": "mplayer",
+        "type": "extension",
+        "desc": "movie player"
+    },
+    {
+        "name": "neofetch",
+        "type": "base",
+        "desc": "show system information"
+    },
+    {
+        "name": "ripgrep",
+        "type": "base",
+        "desc": "recursive grep; super fast: rg",
+        "install": {
+            "type": "apt",
+            "cmd": "sudo apt get install ripgrep"
+        }
+    },
+    {
+        "name": "fd-find",
+        "type": "base",
+        "desc": "fuzzy find, base for most neovim plugins",
+        "install": {
+            "type": "apt",
+            "cmd": "sudo apt get install fd-find"
+        }
+    },
+    {
+        "name": "tig",
+        "type": "base",
+        "desc": "git tui",
+        "install": {
+            "type": "apt",
+            "cmd": "sudo apt get install tig"
+        }
+    },
+    {
+        "name": "tmux",
+        "type": "base",
+        "desc": "terminal multiplexer",
+        "install": {
+            "type": "apt",
+            "cmd": "sudo apt get install tmux"
+        }
+    },
+    {
+        "name": "unzip",
+        "type": "base",
+        "desc": "unzip",
+        "install": {
+            "type": "apt",
+            "cmd": "sudo apt get install unzip"
+        }
+    },
+    {
+        "name": "vim",
+        "type": "base",
+        "desc": "the editor",
+        "install": {
+            "type": "apt",
+            "cmd": "sudo apt get install vim"
+        }
+    },
+    {
+        "name": "wget",
+        "type": "base",
+        "desc": "wget",
+        "install": {
+            "type": "apt",
+            "cmd": "sudo apt get install wget"
+        }
+    },
+    {
+        "name": "xclip",
+        "type": "extension",
+        "desc": "terminal clipboard helper",
+        "install": {
+            "type": "apt",
+            "cmd": "sudo apt get install xclip"
+        }
+    }
+]
