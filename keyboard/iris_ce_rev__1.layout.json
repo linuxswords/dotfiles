@@ -1,10 +1,27 @@
 {
   "name": "Iris CE Rev. 1",
   "vendorProductId": 3406828886,
-  "macros": ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+  "macros": [
+    "{KC_LGUI,KC_LSFT,KC_LEFT}",
+    "{KC_LGUI,KC_LSFT,KC_RGHT}",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
   "layers": [
     [
-      "LT(3,KC_ESC)",
+      "LT(4,KC_ESC)",
       "KC_1",
       "KC_2",
       "KC_3",
@@ -63,7 +80,7 @@
       "KC_RALT",
       "FN_MO23",
       "KC_SPC",
-      "KC_END"
+      "TG(0)"
     ],
     [
       "S(KC_GRV)",
@@ -75,8 +92,8 @@
       "KC_GRV",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_TRNS",
-      "KC_TRNS",
+      "MACRO(0)",
+      "MACRO(1)",
       "S(KC_LBRC)",
       "KC_LCTL",
       "KC_TRNS",
@@ -125,7 +142,7 @@
       "KC_RALT",
       "KC_PEQL",
       "KC_DEL",
-      "S(KC_0)"
+      "TO(0)"
     ],
     [
       "KC_F12",
@@ -136,9 +153,9 @@
       "KC_F5",
       "RGB_TOG",
       "S(KC_1)",
-      "S(KC_2)",
-      "S(KC_3)",
-      "S(KC_4)",
+      "KC_TRNS",
+      "MACRO(0)",
+      "MACRO(1)",
       "S(KC_5)",
       "RGB_MOD",
       "KC_MPRV",
@@ -187,7 +204,7 @@
       "KC_TRNS",
       "KC_TRNS",
       "KC_TRNS",
-      "KC_TRNS"
+      "TO(0)"
     ],
     [
       "KC_TRNS",
