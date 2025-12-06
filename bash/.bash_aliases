@@ -17,3 +17,6 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 
 alias cdc='cd && clear'
+
+# make ripgrep emit hyperlink
+alias rg='rg --hyperlink-format=kitty --with-filename --color=always'
