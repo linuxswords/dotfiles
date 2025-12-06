@@ -7,7 +7,8 @@ alias lzd='lazydocker'
 alias bt='bluetui'
 alias e='/usr/bin/nvim'
 
-alias ll='ls -l'
+alias ls='ls --hyperlink=auto'
+alias ll='ls --hyperlink=auto -l'
 alias lal='ls -la'
 alias lll='ls -ltr'
 
