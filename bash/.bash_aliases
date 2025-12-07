@@ -20,3 +20,6 @@ alias cdc='cd && clear'
 
 # make ripgrep emit hyperlink
 alias rg='rg --hyperlink-format=kitty --with-filename --color=always'
+
+# arch linux
+alias pacman='sudo pacman'
