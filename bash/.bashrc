@@ -209,7 +209,9 @@ grbi() {
 # Load Bash It
 # source "$BASH_IT"/bash_it.sh
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+eval "$(fzf --bash)"
+
 export PATH="/usr/bin:/bin:/usr/local/bin:$PATH"
 export PATH="$PATH:$HOME/bin"
 export PATH="$PATH:/usr/local/go/bin"
