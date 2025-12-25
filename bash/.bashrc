@@ -271,3 +271,5 @@ TODO="t"
 
 # Load Bash It
 source "${BASH_IT?}/bash_it.sh"
+
+eval "$(zoxide init bash)"
