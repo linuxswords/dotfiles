@@ -1,5 +1,5 @@
 return {
-  "ggandor/leap.nvim",
+  url = "https://codeberg.org/andyg/leap.nvim",
   keys = false,
   config = function(_, opts)
     local leap = require("leap")
