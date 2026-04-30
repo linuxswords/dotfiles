@@ -1,0 +1,72 @@
+;; ====================================================================
+;; Kanata – Home Row Mods only
+;;
+;; Layout   : QWERTY (no alpha remapping)
+;; Keyboard : US-International
+;; Mod order: GACS  (GUI · Alt · Ctrl · Shift)
+;;
+;; Left home row:
+;;   a = tap A  /  hold GUI   (lmet)
+;;   s = tap S  /  hold Alt   (lalt)
+;;   d = tap D  /  hold Ctrl  (lctl)
+;;   f = tap F  /  hold Shift (lsft)
+;;
+;; Right home row (mirrored):
+;;   j = tap J  /  hold Shift (rsft)
+;;   k = tap K  /  hold Ctrl  (rctl)
+;;   l = tap L  /  hold Alt   (ralt)
+;;   ; = tap ;  /  hold GUI   (rmet)
+;;
+;; Timing (tune to taste):
+;;   tap-time  – max ms for a press+release to count as a tap  (200)
+;;   hold-time – ms to hold before the hold-action fires       (280)
+;;
+;; Note on US-International dead keys:
+;;   Kanata operates at scan-code level, so ' ` ~ ^ " are still
+;;   referenced by their physical key names in this file.
+;;   Their dead-key behaviour is handled by the OS as usual.
+;; ====================================================================
+
+(defcfg
+  ;; Ensures keys not listed in defsrc (e.g. F-keys, numpad) still
+  ;; work correctly and interact with tap-hold decisions properly.
+  process-unmapped-keys yes
+)
+
+;; Full keyboard in defsrc so every key participates in tap-hold
+;; timing decisions (avoids missed holds when typing fast).
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(defvar
+  tap-time  200
+  hold-time 280
+)
+
+(defalias
+  ;; Left home row – GACS
+  a   (tap-hold $tap-time $hold-time a lmet)   ;; GUI
+  s   (tap-hold $tap-time $hold-time s lalt)   ;; Alt
+  d   (tap-hold $tap-time $hold-time d lctl)   ;; Ctrl
+  f   (tap-hold $tap-time $hold-time f lsft)   ;; Shift
+
+  ;; Right home row – GACS mirrored
+  j   (tap-hold $tap-time $hold-time j rsft)   ;; Shift
+  k   (tap-hold $tap-time $hold-time k rctl)   ;; Ctrl
+  l   (tap-hold $tap-time $hold-time l ralt)   ;; Alt
+  sc  (tap-hold $tap-time $hold-time ; rmet)   ;; GUI
+)
+
+;; Only the eight home-row keys change; everything else is transparent.
+(deflayer base
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    @a   @s   @d   @f   _    _    @j   @k   @l   @sc  _    _
+  _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _              _              _    _    _
+)
