@@ -5,7 +5,8 @@ vim.keymap.set("i", "tn", "<Esc>", { desc = "escape the colmak way" })
 vim.keymap.set("i", "fj", "<Esc>", { desc = "escape the qwerty way" })
 
 vim.keymap.set("n", "<leader>ww", ":w<Enter>", { desc = "write the current buffer" })
-vim.keymap.set("n", "<leader>bw", ":w<Enter>", { desc = "write the current buffer" })
+vim.keymap.set("n", "<leader>W", ":wa<Enter>", { desc = "write all buffers" })
+vim.keymap.set("n", "<leader>Q", ":q<Enter>", { desc = "quit" })
 
 -- move lines up/down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
